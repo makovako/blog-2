@@ -1,0 +1,69 @@
+baseURL: "https://blog.makovako.xyz"
+languageCode: en-us
+title: "makovako blog"
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: true
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+menu:
+    main:
+        - name: Search
+          url: search/
+          weight: 1
+        - name: Categories
+          url: categories/
+          weight: 2
+        - name: Tags
+          url: tags/
+          weight: 3
+        - name: Series
+          url: series
+          weight: 4
+        - name: Archive
+          url: archives
+          weight: 5
+
+params:
+    env: production
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    author: makovako
+    keywords: [blog, makovako, developer, traveler]
+    defaultTheme: auto
+    ShowReadingTime: true
+    homeInfoParams:
+        Title: "makovako"
+        Content: >
+            Technology enthusiast 📱, developer 💻, traveller 🌴 and much more
+    socialIcons:
+        - name: github
+          url: "https://github.com/makovako"
+        - name: RsS
+          url: "index.xml"
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
